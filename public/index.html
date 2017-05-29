@@ -1,40 +1,118 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
+    <title>pithy.af</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      if (window.localStorage && window.localStorage._tk_cache) {
+        document.documentElement.classList.add('wf-active');
+        var script = document.createElement('script');
+        script.innerHTML = localStorage._tk_cache + ";(function () {var timeout = setTimeout(function () {document.documentElement.classList.remove('wf-active');}, 300); Typekit.load({ async: false, active: function () { clearTimeout(timeout); }});})();";
+        document.head.appendChild(script);
+      }
+      window._tk_onload = function () {
+        var req = new XMLHttpRequest()
+        req.addEventListener("load", function () {
+          window.localStorage._tk_cache = this.responseText;
+        });
+        req.open("GET", "https://use.typekit.net/oqw6kuv.js");
+        req.send();
+      };
+    </script>
+    <script async src="https://use.typekit.net/oqw6kuv.js"
+            onload="Typekit.load({ async: true, loading: window._tk_onload })"></script>
   </head>
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <body class="sans-serif">
+    <nav class="Nav mb3">
+      <img src="logo.svg" alt="pithy.af logo" class="Logo">
+      <a href="#">About</a>
+      <a href="#">Submit a quote</a>
+    </nav>
+    <main>
+      <div class="Quote -main">
+        <div class="Quote_Inner">
+          <div class="Quote_Short">
+            <em>And I asked myself</em> about the present: how wide it was, how deep it was, how much was mine to keep.
+          </div>
+          <div class="Quote_Attribution">Kurt Vonnegut Jr.</div>
+          <div class="Quote_Work">Slaughterhouse-Five (1969)</div>
+        </div>
+      </div>
+      <div class="Quote -main">
+        <div class="Quote_Inner">
+          <div class="Quote_Short">
+            <em>Time is an illusion.</em> Lunchtime, doubly so.
+          </div>
+          <div class="Quote_Attribution">Douglas Adams</div>
+          <div class="Quote_Work">The Hitchhiker's Guide to the Galaxy (1979)</div>
+        </div>
+      </div>
+      <div class="Quote -main">
+        <div class="Quote_Inner">
+          <div class="Quote_Short">
+            <em>It's a bad film</em> – one of the worst ever made. But it's not by a bad filmmaker, and must represent some sort of lapse from which Reiner will recover – possibly sooner than I will.
+          </div>
+          <div class="Quote_Attribution">Roger Ebert</div>
+          <div class="Quote_Work">Review of the film North (1994)</div>
+        </div>
+      </div>
+      <div class="Quote -main">
+        <div class="Quote_Inner">
+          <div class="Quote_Short">
+            <em>There was a wall.</em> It did not look important. Where it crossed the roadway, instead of having a gate it degenerated into mere geometry, a line, an idea of boundary. But the idea was real. It was important.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+            Like all walls it was ambiguous, two-faced. What was inside it and what was outside it depended upon which side of it you were on.
+          </div>
+          <div class="Quote_Attribution">Ursula K. Le Guin</div>
+          <div class="Quote_Work">The Dispossessed</div>
+        </div>
+      </div>
+      <div class="Quote -main">
+        <div class="Quote_Inner">
+          <div class="Quote_Short">
+            <em>The spaceships hung in the sky</em> in much the same way that bricks don't.
+          </div>
+          <div class="Quote_Attribution">Douglas Adams</div>
+          <div class="Quote_Work">The Hitchhiker's Guide to the Galaxy (1979)</div>
+        </div>
+      </div>
+      <div class="Quote -main">
+        <div class="Quote_Inner">
+          <div class="Quote_Short">
+            <em>A ship in harbor is safe</em>—but that is not what ships are built for.
+          </div>
+          <div class="Quote_Attribution">Grace M. Hopper</div>
+        </div>
+      </div>
+      <div class="Quote -main">
+        <div class="Quote_Inner">
+          <div class="Quote_Short">
+            <em>O ye heavenly powers, grant me madness!</em> Madness, that I at length may believe in myself!
+          </div>
+          <div class="Quote_Attribution">Friedrich Nietzsche</div>
+          <div class="Quote_Work">Daybreak: Thoughts on the Prejudices of Morality (1881)</div>
+        </div>
+      </div>
+      <div class="Quote -main">
+        <div class="Quote_Inner">
+          <div class="Quote_Short">
+            <em>I went on being an artist.</em> The best thing about art is that you're supposed to be useless as a human being. It's in the job description. Artist — aka feckless, inconstant, feeble, amoral libertine with dirty fingernails. My contemporaries seemed to take to responsibility and capitalist expectations like ducks to plum sauce.
+          </div>
+          <div class="Quote_Attribution">AA Gill</div>
+          <div class="Quote_Work">AA Gill is Away (2010)</div>
+        </div>
+      </div>
+      <div class="Quote -main">
+        <div class="Quote_Inner">
+          <div class="Quote_Short">
+            <em>Progress,</em> under whose feet the grass mourns and the forest turns into paper from which newspaper plants grow, has subordinated the purpose of life to the means of subsistence and turned us into the nuts and bolts for our tools.
+          </div>
+          <div class="Quote_Attribution">Karl Kraus</div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
