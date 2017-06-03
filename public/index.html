@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
     <title>pithy.af</title>
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css">
+    <meta property="og:title" content="pithy.af — witty phrases & clever prose">
+    <meta property="og:image" content="http://pithy.af/logo.png">
+    <meta name="description" content="A Front End Center project. A place to save clever turns-of-phrase & discover authors at their most eloquent.">
     <script>
       if (window.localStorage && window.localStorage._tk_cache) {
         document.documentElement.classList.add('wf-active');
@@ -24,96 +25,9 @@
       };
     </script>
     <script async src="https://use.typekit.net/oqw6kuv.js"
-            onload="Typekit.load({ async: true, loading: window._tk_onload })"></script>
+            onload="try { Typekit.load({ async: true, loading: window._tk_onload }) } catch (e) {}"></script>
   </head>
   <body class="sans-serif">
-    <nav class="Nav mb3">
-      <img src="logo.svg" alt="pithy.af logo" class="Logo">
-      <a href="#">About</a>
-      <a href="#">Submit a quote</a>
-    </nav>
-    <main>
-      <div class="Quote -main">
-        <div class="Quote_Inner">
-          <div class="Quote_Short">
-            <em>And I asked myself</em> about the present: how wide it was, how deep it was, how much was mine to keep.
-          </div>
-          <div class="Quote_Attribution">Kurt Vonnegut Jr.</div>
-          <div class="Quote_Work">Slaughterhouse-Five (1969)</div>
-        </div>
-      </div>
-      <div class="Quote -main">
-        <div class="Quote_Inner">
-          <div class="Quote_Short">
-            <em>Time is an illusion.</em> Lunchtime, doubly so.
-          </div>
-          <div class="Quote_Attribution">Douglas Adams</div>
-          <div class="Quote_Work">The Hitchhiker's Guide to the Galaxy (1979)</div>
-        </div>
-      </div>
-      <div class="Quote -main">
-        <div class="Quote_Inner">
-          <div class="Quote_Short">
-            <em>It's a bad film</em> – one of the worst ever made. But it's not by a bad filmmaker, and must represent some sort of lapse from which Reiner will recover – possibly sooner than I will.
-          </div>
-          <div class="Quote_Attribution">Roger Ebert</div>
-          <div class="Quote_Work">Review of the film North (1994)</div>
-        </div>
-      </div>
-      <div class="Quote -main">
-        <div class="Quote_Inner">
-          <div class="Quote_Short">
-            <em>There was a wall.</em> It did not look important. Where it crossed the roadway, instead of having a gate it degenerated into mere geometry, a line, an idea of boundary. But the idea was real. It was important.
-
-            Like all walls it was ambiguous, two-faced. What was inside it and what was outside it depended upon which side of it you were on.
-          </div>
-          <div class="Quote_Attribution">Ursula K. Le Guin</div>
-          <div class="Quote_Work">The Dispossessed</div>
-        </div>
-      </div>
-      <div class="Quote -main">
-        <div class="Quote_Inner">
-          <div class="Quote_Short">
-            <em>The spaceships hung in the sky</em> in much the same way that bricks don't.
-          </div>
-          <div class="Quote_Attribution">Douglas Adams</div>
-          <div class="Quote_Work">The Hitchhiker's Guide to the Galaxy (1979)</div>
-        </div>
-      </div>
-      <div class="Quote -main">
-        <div class="Quote_Inner">
-          <div class="Quote_Short">
-            <em>A ship in harbor is safe</em>—but that is not what ships are built for.
-          </div>
-          <div class="Quote_Attribution">Grace M. Hopper</div>
-        </div>
-      </div>
-      <div class="Quote -main">
-        <div class="Quote_Inner">
-          <div class="Quote_Short">
-            <em>O ye heavenly powers, grant me madness!</em> Madness, that I at length may believe in myself!
-          </div>
-          <div class="Quote_Attribution">Friedrich Nietzsche</div>
-          <div class="Quote_Work">Daybreak: Thoughts on the Prejudices of Morality (1881)</div>
-        </div>
-      </div>
-      <div class="Quote -main">
-        <div class="Quote_Inner">
-          <div class="Quote_Short">
-            <em>I went on being an artist.</em> The best thing about art is that you're supposed to be useless as a human being. It's in the job description. Artist — aka feckless, inconstant, feeble, amoral libertine with dirty fingernails. My contemporaries seemed to take to responsibility and capitalist expectations like ducks to plum sauce.
-          </div>
-          <div class="Quote_Attribution">AA Gill</div>
-          <div class="Quote_Work">AA Gill is Away (2010)</div>
-        </div>
-      </div>
-      <div class="Quote -main">
-        <div class="Quote_Inner">
-          <div class="Quote_Short">
-            <em>Progress,</em> under whose feet the grass mourns and the forest turns into paper from which newspaper plants grow, has subordinated the purpose of life to the means of subsistence and turned us into the nuts and bolts for our tools.
-          </div>
-          <div class="Quote_Attribution">Karl Kraus</div>
-        </div>
-      </div>
-    </main>
+    <div id="root"></div>
   </body>
 </html>
