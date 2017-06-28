@@ -1,7 +1,18 @@
 const express = require('express')
 const serveStatic = require('serve-static')
+const fs = require('fs')
+const React = require('react')
+const ReactDOM = require('react-dom/server')
+const App = require('./src/App')
+const indexHtml = fs.readFileSync('build/index.html', 'utf8')
 
 const app = express()
+
+app.get('/', (req, res) => {
+  const appMarkup = ReactDOM.renderToStaticMarkup(React.createElement(App))
+  const fullResponse = indexHtml.replace(/ data-ssr-output>/, '>' + appMarkup)
+  res.send(fullResponse)
+})
 
 app.use(serveStatic('build', {
   setHeaders(res, path) {
