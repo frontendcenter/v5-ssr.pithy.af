@@ -3,17 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-preset-react-app": "^3.0.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-scripts": "1.0.7"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "NODE_ENV=production babel-node server.js",
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "git push heroku master && cfcli -d pithy.af purge",
     "postinstall": "npm run build"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      "transform-es2015-modules-commonjs"
+    ]
   }
 }
